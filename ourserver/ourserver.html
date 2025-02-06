@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Download Mod</title>
+    <style>
+        /* 设置背景图片 */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('../Ms-Team-Website\ Back.jpg'); /* 背景图片路径 */
+            background-size: cover; /* 背景图片覆盖整个页面 */
+            background-repeat: no-repeat; /* 背景图片不重复 */
+            background-attachment: fixed; /* 背景图片固定 */
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-size: 36px; /* 增加字体大小 */
+        }
+        p {
+            margin-bottom: 20px; /* 在文字和按钮之间增加间距 */
+        }
+        #downloadButton {
+            padding: 15px 30px; /* 增加按钮内边距 */
+            font-size: 30px; /* 增加按钮字体大小 */
+            background-color: #007bff; /* 按钮背景颜色为蓝色 */
+            color: white;
+            border: none;
+            border-radius: 5px; /* 增加按钮圆角 */
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s; /* 平滑过渡效果 */
+        }
+        #downloadButton:hover {
+            background-color: #0056b3; /* 鼠标悬停时按钮背景颜色变暗 */
+            transform: scale(0.95); /* 鼠标悬停时按钮稍微变小 */
+        }
+    </style>
+</head>
+<body>
+    <p>1.19.2Forge ip：hb.frp.one:16700</p>
+    <button id="downloadButton">下载mod</button>
+
+    <script>
+        document.getElementById('downloadButton').addEventListener('click', function() {
+            window.location.href = 'reignofnether-1.0.2.jar'; // 这里假设mods.zip文件与HTML文件在同一目录下
+        });
+    </script>
+</body>
+</html>
