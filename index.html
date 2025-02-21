@@ -6,11 +6,10 @@
     <title>MSTeam 主页</title>
     <link rel="icon" href="MS.png" type="image/png">
     <style>
-        /* 设置背景图片 */
         body {
             margin: 0;
             padding: 0;
-            background-image: url('Website\ Back.jpg');
+            background-image: url('Website Back.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -22,44 +21,52 @@
             font-family: Arial， sans-serif;
         }
 
-        /* 主标题样式 */
         。main-title {
             font-size: 80px;
             color: white;
             font-weight: bold;
         }
 
-        /* 副标题样式 */
         。subtitle {
             font-size: 32px;
             color: gray;
             margin-top: 20px;
         }
 
-        /* 按钮样式 */
+        /* 修改后的按钮容器 */
+        。button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px; /* 按钮间距 */
+            margin-top: 40px;
+        }
+
         。button {
-            background-color: #007BFF;
+            background-color: #007BFF; /* 蓝色背景恢复 */
             color: white;
             padding: 20px 40px;
             border: none;
             border-radius: 15px;
-            margin-top: 40px;
             cursor: pointer;
             font-size: 32px;
             text-decoration: none;
-            display: inline-block;
+            text-align: center;
+            transition: background-color 0.3s; /* 添加过渡动画 */
         }
 
-        /* 按钮悬停效果 */
         。button:hover {
             background-color: #0056b3;
+            transform: scale(1.05); /* 悬停放大效果 */
         }
     </style>
 </head>
 <body>
     <div class="main-title">MSTeam</div>
     <div class="subtitle">MC综合性网站</div>
-    <a href="minecraft/minecraft.html" class="button">前往Minecraft页</a>
-    <a href="class/class.html" class="button">前往班级社区</a>
+    
+    <div class="button-container">
+        <a href="minecraft/minecraft.html" class="button">前往Minecraft页</a>
+        <a href="class/class.html" class="button">前往班级社区</a>
+    </div>
 </body>
 </html>
