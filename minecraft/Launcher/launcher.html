@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSTeam 启动器下载-></title>
+    <link rel="icon" href="../MS.png" type="image/png">
+    <style>
+        /* 设置背景图片 */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('/Website Back.jpg'); /* 背景图片路径 */
+            background-size: cover; /* 背景图片覆盖整个页面 */
+            background-repeat: no-repeat; /* 背景图片不重复 */
+            background-attachment: fixed; /* 背景图片固定 */
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 右上角按钮样式 */
+        .top-right-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            text-decoration: none; /* 移除下划线 */
+            display: inline-block; /* 使按钮样式生效 */
+        }
+
+        .top-right-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        .navbar img {
+            height: 50px;
+            margin-left: 8px;
+            margin-top: 15px; /* 向下移动图片 */
+        }
+
+        /* 内容区域样式 */
+        .content {
+            text-align: center;
+        }
+
+        /* 按钮样式 */
+        .button {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px; /* 放大按钮 */
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px; /* 放大字体 */
+            text-decoration: none; /* 移除下划线 */
+            display: inline-block; /* 使按钮样式生效 */
+            margin-bottom: 10px; /* 按钮之间的间距 */
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* 提示文字样式 */
+        .hint {
+            color: black;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="/minecraft/MSTeam.png" alt="MSTeam Logo"> <!-- 导航栏图片路径 -->
+    </div>
+    <div class="content">
+        <!-- 电脑端按钮 -->
+        <a href="https://bbsmc.net/software/pcl" class="button">电脑端</a>
+        <!-- 手机端按钮 -->
+        <a href="https://github.com/FCL-Team/FoldCraftLauncher/releases" class="button">手机端</a>
+        <!-- 新增的下载手机版渲染器按钮 -->
+        <a href="https://ng-gl4es.bzlzhh.top/" class="button">下载手机版推荐渲染器(配合手机端使用)</a>
+        <!-- 提示文字 -->
+        <div class="hint">Github需要VPN，微软商店下载Watt Tookit后加速下载手机端以及渲染器</div>
+    </div>
+</body>
+</html>

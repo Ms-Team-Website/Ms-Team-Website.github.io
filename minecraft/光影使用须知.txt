@@ -1,0 +1,5 @@
+这是一个低配光影（已调至小米平板6s pro的最高配置，进去后可自行修改）
+需要解压成
+Mellow Shader v1.5.4.zip
+Mellow Shader v1.5.4.zip.txt
+后使用

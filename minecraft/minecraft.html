@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSTeam Minecraft-></title>
+    <link rel="icon" href="../MS.png" type="image/png">
+    <style>
+        /* 设置背景图片 */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('../Website Back.jpg'); /* 背景图片路径 */
+            background-size: cover; /* 背景图片覆盖整个页面 */
+            background-repeat: no-repeat; /* 背景图片不重复 */
+            background-attachment: fixed; /* 背景图片固定 */
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* 禁止滚动 */
+        }
+
+        /* 右上角按钮样式 */
+        .top-right-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            text-decoration: none; /* 移除下划线 */
+            display: inline-block; /* 使按钮样式生效 */
+        }
+
+        .top-right-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        .navbar img {
+            height: 50px;
+            margin-left: 8px;
+            margin-top: 15px; /* 向下移动图片 */
+        }
+
+        /* 内容区域样式 */
+        .content {
+            margin-top: 70px; /* 确保内容不会被固定的导航栏遮挡 */
+            padding: 20px;
+            position: relative;
+        }
+
+        /* 分割线样式 */
+        .divider {
+            border-top: 2px solid #fff;
+            margin: 5px 0;
+        }
+
+        /* 下载启动器按钮样式 */
+        .download-button {
+            position: absolute;
+            top: 35px;
+            left: 20px;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none; /* 移除下划线 */
+            display: inline-block; /* 使按钮样式生效 */
+        }
+
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* 下载光影按钮样式 */
+        .download-yingguang-button {
+            position: absolute;
+            top: 35px;
+            left: 150px; /* 调整位置以确保按钮在下载启动器按钮右侧 */
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none; /* 移除下划线 */
+            display: inline-block; /* 使按钮样式生效 */
+        }
+
+        .download-yingguang-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="MSTeam.png" alt="MSTeam Logo">
+        <a href="../ourserver/ourserver.html" class="top-right-button">加入我们的服务器</a>
+    </div>
+    <div class="content">
+        <a href="../minecraft/Launcher/launcher.html" class="download-button">下载启动器</a>
+        <a id="downloadYingGuang" class="download-yingguang-button">下载光影</a>
+        <div class="divider"></div>
+        <!-- 这里放置你的主要内容 -->
+    </div>
+
+    <script>
+        document.getElementById('downloadYingGuang').addEventListener('click', function() {
+            // 创建一个隐藏的<a>标签用于下载文件
+            function downloadFile(filename) {
+                var element = document.createElement('a');
+                element.setAttribute('href', filename);
+                element.setAttribute('download', filename);
+                element.style.display = 'none';
+                document.body.appendChild(element);
+                element.click();
+                document.body.removeChild(element);
+            }
+
+            // 下载“光影使用须知.txt”
+            downloadFile('光影使用须知.txt');
+            // 下载“Mellow1.5.4.zip”
+            downloadFile('Mellow1.5.4.zip');
+        });
+    </script>
+</body>
+</html>
