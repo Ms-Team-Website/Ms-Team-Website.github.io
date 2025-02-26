@@ -4,33 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>包头中学科技节</title>
-    <link rel="icon" href="/minecraft/MSTeam.png" type="image/png">
+    <link rel="icon" href="../MS.png" type="image/png">
     <style>
         body {
             background-image: url('/Website Back.jpg');
-            background-size: cover; /* 使背景图片覆盖整个页面 */
-            background-repeat: no-repeat; /* 防止背景图片重复 */
-            background-attachment: fixed; /* 使背景图片固定，不随滚动条滚动 */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             margin: 0;
             padding: 20px;
         }
+
         .top-left-icons {
             position: fixed;
             top: 20px;
             left: 20px;
             display: flex;
-            gap: 10px; /* 图标之间的间距 */
-            z-index: 1000; /* 确保图标在最上层 */
+            align-items: flex-start;
+            gap: 15px;
+            z-index: 1000;
         }
+
+        /* 数学公式图标 */
+        .top-left-icons img.minecraft-icon {
+            width: 120px;
+            vertical-align: top;
+        }
+
+        /* 学校文字图标 */
         .top-left-icons img.btzx-icon {
-            width: 150px; /* 设置与MSTeam.png相同的宽度 */
+            width: 130px;
+            margin-top: -3px;
+            filter: contrast(1.1);
         }
     </style>
 </head>
 <body>
-    <!-- 新增左上角图标 -->
+    <!-- 左上角图标 -->
     <div class="top-left-icons">
-        <img src="/minecraft/MSTeam.png" alt="Minecraft图标">
+        <img src="/minecraft/MSTeam.png" alt="Minecraft图标" class="minecraft-icon">
         <img src="/class/tech/btzx_icon.png" alt="包头中学图标" class="btzx-icon">
     </div>
     
