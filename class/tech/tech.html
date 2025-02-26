@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>包头中学科技节</title>
-    <link rel="icon" href="../MS.png" type="image/png">
+    <link rel="icon" href="/MS.png" type="image/png">
     <style>
         body {
             background-image: url('/Website Back.jpg');
@@ -14,28 +14,21 @@
             margin: 0;
             padding: 20px;
         }
-
         .top-left-icons {
             position: fixed;
             top: 20px;
             left: 20px;
             display: flex;
+            flex-direction: column;
             align-items: flex-start;
-            gap: 15px;
+            gap: 10px;
             z-index: 1000;
         }
-
-        /* 数学公式图标 */
         .top-left-icons img.minecraft-icon {
             width: 150px;
-            vertical-align: top;
         }
-
-        /* 学校文字图标 */
         .top-left-icons img.btzx-icon {
-            width: 130px;
-            margin-top: -3px;
-            filter: contrast(1.1);
+            width: 150px;
         }
     </style>
 </head>
@@ -43,7 +36,7 @@
     <!-- 左上角图标 -->
     <div class="top-left-icons">
         <img src="/minecraft/MSTeam.png" alt="Minecraft图标" class="minecraft-icon">
-        <p><img src="/class/tech/btzx_icon.png" alt="包头中学图标" class="btzx-icon"></p>
+        <img src="/class/tech/btzx_icon.png" alt="包头中学图标" class="btzx-icon">
     </div>
     
     <!-- 其他网页内容 -->
