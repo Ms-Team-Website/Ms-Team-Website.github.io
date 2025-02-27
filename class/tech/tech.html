@@ -30,13 +30,28 @@
         .top-left-icons img.btzx-icon {
             width: 130px;
         }
+        .transparent-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+            z-index: 999; /* Ensure it covers other content */
+        }
+        .top-left-icons-container {
+            position: relative; /* Ensures the overlay appears above other content */
+        }
     </style>
 </head>
 <body>
     <!-- 左上角图标 -->
-    <div class="top-left-icons">
-        <img src="/minecraft/MSTeam.png" alt="Minecraft图标" class="minecraft-icon">
-        <img src="/class/tech/btzx_icon.png" alt="包头中学图标" class="btzx-icon">
+    <div class="top-left-icons-container">
+        <div class="transparent-overlay"></div>
+        <div class="top-left-icons">
+            <img src="/minecraft/MSTeam.png" alt="Minecraft图标" class="minecraft-icon">
+            <img src="/class/tech/btzx_icon.png" alt="包头中学图标" class="btzx-icon">
+        </div>
     </div>
     
     <!-- 其他网页内容 -->
