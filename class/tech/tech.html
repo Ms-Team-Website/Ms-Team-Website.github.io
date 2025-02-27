@@ -12,29 +12,46 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             margin: 0;
-            padding: 20px;
+            /* 添加顶部内边距避免内容被遮挡 */
+            padding-top: 160px;
         }
+
         .top-left-icons-container {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.8); /* Black with 80% transparency */
-            padding: 20px;
+            /* 调整透明度为50% */
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px 20px;
             z-index: 1000;
+            /* 改为垂直排列 */
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-start;
         }
-        .top-left-icons img.minecraft-icon {
+
+        .top-left-icons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .minecraft-icon {
             width: 150px;
+            height: auto;
         }
-        .top-left-icons img.btzx-icon {
+
+        .btzx-icon {
             width: 130px;
+            height: auto;
+            /* 添加左边距对齐图标 */
+            margin-left: 10px;
         }
     </style>
 </head>
 <body>
-    <!-- 左上角图标 -->
+    <!-- 修改后的顶部容器 -->
     <div class="top-left-icons-container">
         <div class="top-left-icons">
             <img src="/minecraft/MSTeam.png" alt="Minecraft图标" class="minecraft-icon">
