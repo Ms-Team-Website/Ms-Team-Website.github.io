@@ -14,15 +14,16 @@
             margin: 0;
             padding: 20px;
         }
-        .top-left-icons {
+        .top-left-icons-container {
             position: fixed;
-            top: 20px;
-            left: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 10px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Black with 80% transparency */
+            padding: 20px;
             z-index: 1000;
+            display: flex;
+            align-items: center;
         }
         .top-left-icons img.minecraft-icon {
             width: 150px;
@@ -30,24 +31,11 @@
         .top-left-icons img.btzx-icon {
             width: 130px;
         }
-        .transparent-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
-            z-index: 999; /* Ensure it covers other content */
-        }
-        .top-left-icons-container {
-            position: relative; /* Ensures the overlay appears above other content */
-        }
     </style>
 </head>
 <body>
     <!-- 左上角图标 -->
     <div class="top-left-icons-container">
-        <div class="transparent-overlay"></div>
         <div class="top-left-icons">
             <img src="/minecraft/MSTeam.png" alt="Minecraft图标" class="minecraft-icon">
             <img src="/class/tech/btzx_icon.png" alt="包头中学图标" class="btzx-icon">
