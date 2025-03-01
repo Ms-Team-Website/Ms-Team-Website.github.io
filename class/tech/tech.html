@@ -57,7 +57,30 @@
             font-size: 36px; /* Larger font size */
             font-weight: bold; /* Bold text */
         }
+
+        .countdown {
+            font-size: 24px; /* Font size for countdown */
+            margin-top: 20px;
+        }
     </style>
+    <script>
+        function calculateDaysToNextMay30() {
+            const today = new Date();
+            const currentYear = today.getFullYear();
+            const nextMay30 = new Date(currentYear, 4, 30); // Month is 0-indexed (4 = May)
+
+            if (today > nextMay30) {
+                nextMay30.setFullYear(currentYear + 1);
+            }
+
+            const oneDay = 24 * 60 * 60 * 1000; // Hours * minutes * seconds * milliseconds
+            const daysRemaining = Math.round((nextMay30 - today) / oneDay);
+
+            document.getElementById('days-to-may-30').textContent = daysRemaining;
+        }
+
+        window.onload = calculateDaysToNextMay30;
+    </script>
 </head>
 <body>
     <!-- 新版顶部区块 -->
@@ -71,6 +94,11 @@
     <!-- 中间的消息 -->
     <div class="message">
         Only <span class="highlight">MSTeam</span> Can Do!
+    </div>
+
+    <!-- 倒计时消息 -->
+    <div class="countdown">
+        距离科技节开始还有（天）：<span id="days-to-may-30"></span>
     </div>
 
     <!-- 其他网页内容 -->
