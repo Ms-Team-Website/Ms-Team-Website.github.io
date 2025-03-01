@@ -10,6 +10,13 @@
             background-size: cover;
             margin: 0;
             padding-top: 120px; /* 根据图标总高度调整 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            font-size: 24px;
+            text-align: center;
         }
 
         /* 新版顶部容器 */
@@ -40,6 +47,10 @@
             height: auto;
             margin-left: 5px; /* 微调对齐 */
         }
+
+        .highlight {
+            color: blue;
+        }
     </style>
 </head>
 <body>
@@ -50,7 +61,12 @@
             <a href="http://www.btzx.edu.sh.cn/"><img src="/class/tech/btzx_icon.png" alt="包头中学图标" class="btzx-icon"></a>
         </div>
     </div>
-    
+
+    <!-- 中间的消息 -->
+    <div>
+        Only <span class="highlight">MSTeam</span> Can Do!
+    </div>
+
     <!-- 其他网页内容 -->
 </body>
 </html>
