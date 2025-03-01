@@ -20,11 +20,21 @@
             flex-direction: column;
         }
 
-        .header-container {
+        .nav-bar {
             position: fixed;
             top: 0;
+            width: 100%;
+            background: rgba(40, 40, 40, 0.2); /* 深色半透明背景 */
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .header-container {
+            position: fixed;
+            top: 50px; /* 确保导航栏和头部容器不重叠 */
             left: 0;
-            background: rgba(40, 40, 40, 0.5); /* 深色半透明背景 */
+            background: rgba(40, 40, 40, 0.2); /* 深色半透明背景 */
             padding: 10px 15px;
             border-radius: 0 0 8px 0; /* 右下圆角 */
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
@@ -60,6 +70,14 @@
     </style>
 </head>
 <body>
+    <!-- 导航栏 -->
+    <div class="nav-bar">
+        <a href="tech.html">首页</a>
+        <a href="characteristic.html">特色</a>
+        <a href="introduce.html">介绍</a>
+        <a href="about.html">关于</a>
+    </div>
+
     <!-- 新版顶部区块 -->
     <div class="header-container">
         <div class="logo-group">
