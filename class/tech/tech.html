@@ -17,6 +17,7 @@
             color: white;
             font-size: 24px;
             text-align: center;
+            overflow: hidden; /* Prevent scrolling */
         }
 
         /* 新版顶部容器 */
@@ -51,6 +52,11 @@
         .highlight {
             color: blue;
         }
+
+        .message {
+            font-size: 36px; /* Larger font size */
+            font-weight: bold; /* Bold text */
+        }
     </style>
 </head>
 <body>
@@ -63,7 +69,7 @@
     </div>
 
     <!-- 中间的消息 -->
-    <div>
+    <div class="message">
         Only <span class="highlight">MSTeam</span> Can Do!
     </div>
 
