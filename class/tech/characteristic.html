@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特色</title>
+    <style>
+        body {
+            background-image: url('/Website Back.jpg');
+            background-size: cover;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            overflow: hidden; /* Prevent scrolling */
+            flex-direction: column;
+        }
+
+        .header-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(40, 40, 40, 0.5); /* 深色半透明背景 */
+            padding: 10px 15px;
+            border-radius: 0 0 8px 0; /* 右下圆角 */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        .logo-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px; /* 图标间距 */
+        }
+
+        .minecraft-icon {
+            width: 120px; /* 适当缩小尺寸 */
+            height: auto;
+        }
+
+        .btzx-icon {
+            width: 110px; /* 等比缩小 */
+            height: auto;
+            margin-left: 5px; /* 微调对齐 */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- 新版顶部区块 -->
+    <div class="header-container">
+        <div class="logo-group">
+            <a href="/"><img src="/minecraft/MSTeam.png" alt="Minecraft图标" class="minecraft-icon"></a>
+            <a href="http://www.btzx.edu.sh.cn/"><img src="/class/tech/btzx_icon.png" alt="包头中学图标" class="btzx-icon"></a>
+        </div>
+        <nav>
+            <a href="tech.html">首页</a>
+            <a href="characteristic.html">特色</a>
+            <a href="introduce.html">介绍</a>
+            <a href="about.html">关于</a>
+        </nav>
+    </div>
+
+    <!-- 页面内容 -->
+    <div>
+        <!-- 这里添加页面的具体内容 -->
+    </div>
+</body>
+</html>
