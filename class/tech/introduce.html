@@ -3,95 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>介绍</title>
+    <title>介绍 - 上海市包头中学科技节</title>
     <link rel="icon" href="/MS.png" type="image/png">
     <style>
         body {
             background-image: url('/Website Back.jpg');
             background-size: cover;
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: "Microsoft YaHei", sans-serif;
             color: white;
             font-size: 24px;
-            text-align: center;
-            overflow: hidden; /* Prevent scrolling */
-            flex-direction: column;
+            overflow-x: hidden;
         }
 
         .nav-bar a {
             color: white;
             text-decoration: none;
             margin: 0 15px;
+            transition: color 0.3s;
         }
 
         .nav-bar a:hover {
             text-decoration: underline;
+            color: #f0f0f0;
         }
 
         .nav-bar {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(40, 40, 40, 0.2); /* 深色半透明背景 */
+            background: rgba(40, 40, 40, 0.2);
             padding: 10px 0;
             text-align: center;
             z-index: 1000;
+            backdrop-filter: blur(5px);
         }
 
         .header-container {
             position: fixed;
-            top: 50px; /* 确保导航栏和头部容器不重叠 */
+            top: 50px;
             left: 0;
-            background: rgba(40, 40, 40, 0.2); /* 深色半透明背景 */
+            background: rgba(40, 40, 40, 0.2);
             padding: 10px 15px;
-            border-radius: 0 0 8px 0; /* 右下圆角 */
+            border-radius: 0 0 8px 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
             z-index: 1000;
+            backdrop-filter: blur(5px);
         }
 
         .logo-group {
             display: flex;
             flex-direction: column;
-            gap: 8px; /* 图标间距 */
+            gap: 8px;
         }
 
         .minecraft-icon {
-            width: 120px; /* 适当缩小尺寸 */
+            width: 120px;
             height: auto;
         }
 
         .btzx-icon {
-            width: 110px; /* 等比缩小 */
+            width: 110px;
             height: auto;
-            margin-left: 5px; /* 微调对齐 */
+            margin-left: 5px;
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
+        .content-container {
+            max-width: 1000px;
+            margin: 120px auto 50px auto;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        .section {
+            margin-bottom: 40px;
+            text-align: left;
         }
 
-        .message {
-            font-family: 'Microsoft YaHei', sans-serif;
-            font-size: 24px;
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
             text-align: center;
-            margin-top: 20px;
-            color: red; /* Change text color to red */
+            color: #ffffff;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #4caf50;
+            border-bottom: 2px solid rgba(76, 175, 80, 0.5);
+            padding-bottom: 8px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #4caf50;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            margin-left: 10px;
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            padding: 10px 30px 20px 30px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 4px solid #4caf50;
+            border-radius: 50%;
+            left: -10px;
+            top: 15px;
+            z-index: 1;
+        }
+
+        .timeline-year {
+            font-weight: bold;
+            color: #4caf50;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .highlight {
+            color: #ffeb3b;
+            font-weight: bold;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .content-container {
+                padding: 20px;
+                margin-top: 150px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+            
+            .timeline {
+                padding-left: 20px;
+            }
+            
+            .timeline-item {
+                padding: 10px 15px 20px 20px;
+            }
         }
     </style>
 </head>
 <body>
     <!-- 导航栏 -->
     <div class="nav-bar">
-        <a href="tech.html">首页</a>
+        <a href="index.html">首页</a>
         <a href="characteristic.html">特色</a>
         <a href="introduce.html">介绍</a>
         <a href="about.html">关于</a>
@@ -100,17 +207,94 @@
     <!-- 新版顶部区块 -->
     <div class="header-container">
         <div class="logo-group">
-            <a href="/"><img src="/minecraft/MSTeam.png" alt="Minecraft图标" class="minecraft-icon"></a>
-            <a href="http://www.btzx.edu.sh.cn/"><img src="/class/tech/btzx_icon.png" alt="包头中学图标" class="btzx-icon"></a>
+            <a href="index.html"><img src="/MSTeam.png" alt="Minecraft图标" class="minecraft-icon"></a>
+            <a href="http://www.btzx.edu.sh.cn/"><img src="btzx_icon.png" alt="包头中学图标" class="btzx-icon"></a>
         </div>
     </div>
 
     <!-- 页面内容 -->
-    <div class="message">
-        居然真的有人来看介绍了！！！<br>
-        这说明你根本没好好看特色那一页，<br>
-        我写的这么good，<br>
-        你居然不看？！赶紧给我去看！！！<br>
+    <div class="content-container">
+        <h1>上海市包头中学科技节介绍</h1>
+        
+        <div class="section">
+            <h2>科技节概述</h2>
+            <p>上海市包头中学科技节是学校每年举办的重要科技文化活动，旨在激发学生的科学兴趣，培养创新精神和实践能力。科技节通过丰富多彩的活动形式，为学生提供展示才华、交流创意的平台，同时也是学校科技教育成果的重要展示窗口。</p>
+            
+            <p>科技节通常在每年5月底举行，为期一周，涵盖科技竞赛、作品展示、专题讲座、互动体验等多种形式的活动，吸引全校师生积极参与。</p>
+        </div>
+        
+        <div class="section">
+            <h2>科技节历史</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2018年</div>
+                    <p>首届包头中学科技节正式启动，以"探索科学奥秘，点燃创新火花"为主题，开展了机器人比赛、科学实验展示等活动。</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2019年</div>
+                    <p>第二届科技节扩大规模，增加了编程竞赛环节，并邀请上海交通大学的教授进行科普讲座，反响热烈。</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2020年</div>
+                    <p>受疫情影响，科技节首次尝试"线上+线下"相结合的模式，开展了云端科技作品展示和线上科学辩论赛。</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2021年</div>
+                    <p>科技节主题聚焦"人工智能与未来教育"，举办了AI应用设计大赛，学生们展示了多个创新项目。</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2022年</div>
+                    <p>科技节规模进一步扩大，首次与兄弟学校联合举办，增设了跨校科技挑战赛，促进了校际交流。</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2023年</div>
+                    <p>科技节以"绿色科技，可持续发展"为主题，鼓励学生关注环保议题，设计解决环境问题的创新方案。</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2024年</div>
+                    <p>即将到来的科技节将以"数字创新，智慧未来"为主题，重点关注数字技术在教育和日常生活中的应用。</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>科技节目标</h2>
+            <p>包头中学科技节旨在实现以下目标：</p>
+            <p>• 激发学生对科学技术的<span class="highlight">兴趣和热情</span>，培养科学探究精神</p>
+            <p>• 提供展示<span class="highlight">创新思维和实践能力</span>的平台，鼓励学生大胆尝试</p>
+            <p>• 促进<span class="highlight">跨学科学习</span>，打破传统学科界限，培养综合素养</p>
+            <p>• 加强<span class="highlight">校际交流与合作</span>，分享教育资源和经验</p>
+            <p>• 培养学生的<span class="highlight">团队协作能力</span>和项目管理能力</p>
+        </div>
+        
+        <div class="section">
+            <h2>科技节影响</h2>
+            <p>多年来，包头中学科技节已成为学校的品牌活动，产生了广泛而深远的影响：</p>
+            <p>• 多个学生科技创新项目在市级、省级比赛中获奖</p>
+            <p>• 培养了一批对科技领域有浓厚兴趣的学生，部分毕业生选择在理工科领域继续深造</p>
+            <p>• 促进了学校STEAM教育的发展，推动了教学方式的创新</p>
+            <p>• 增强了学校的科技教育特色，提升了学校在科技教育领域的影响力</p>
+        </div>
+        
+        <div class="section">
+            <h2>参与方式</h2>
+            <p>所有包头中学的学生都可以参与科技节活动。具体参与方式包括：</p>
+            <p>• 个人或团队报名参加各类竞赛活动</p>
+            <p>• 提交科技创新作品参展</p>
+            <p>• 担任志愿者协助活动组织</p>
+            <p>• 参与科技讲座和互动体验活动</p>
+            <p>每年科技节的具体活动安排和报名方式将通过学校官网、班级通知等渠道发布，敬请关注！</p>
+        </div>
+        <div class="section">
+            <h2>免责申明</h2>
+            <p>以上内容纯瞎编（没活整了）</p>
+        </div>
     </div>
 </body>
 </html>
