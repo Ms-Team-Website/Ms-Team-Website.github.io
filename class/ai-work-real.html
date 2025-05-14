@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>就业与AI发展趋势分析（2023-2025）</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --text-primary: #2c3e50;
+            --chart-accent: #3498db;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-primary);
+            margin: 2rem;
+        }
+
+        .chart-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .data-source {
+            margin-top: 1rem;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            border-bottom: 2px solid var(--chart-accent);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>中国就业率与人工智能发展指数趋势分析</h1>
+    
+    <div class="chart-container">
+        <canvas id="trendChart"></canvas>
+        <div class="data-source">
+            数据来源：国家统计局（2023-2024）、麦肯锡全球研究院预测（2025）
+        </div>
+    </div>
+
+    <script>
+        const config = {
+            type: 'line',
+            data: {
+                labels: ['2023', '2024', '2025'],
+                datasets: [
+                    {
+                        label: '男性就业率 (%)',
+                        data: [65.4, 66.2, 67.0],
+                        borderColor: '#3498db',
+                        backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        pointRadius: 5,
+                        pointHoverRadius: 8
+                    },
+                    {
+                        label: '女性就业率 (%)',
+                        data: [44.8, 48.1, 52.3],
+                        borderColor: '#e74c3c',
+                        backgroundColor: 'rgba(231, 76, 60, 0.1)',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        borderDash: [5, 5],
+                        pointRadius: 5
+                    },
+                    {
+                        label: 'AI发展指数',
+                        data: [80, 89, 93],
+                        borderColor: '#2ecc71',
+                        backgroundColor: 'rgba(46, 204, 113, 0.1)',
+                        borderWidth: 3,
+                        tension: 0.2,
+                        yAxisID: 'y1'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                interaction: {
+                    mode: 'index'
+                },
+                scales: {
+                    y: {
+                        title: {
+                            display: true,
+                            text: '就业率 (%)'
+                        },
+                        beginAtZero: false,
+                        min: 40,
+                        max: 100,
+                        grid: {
+                            color: 'rgba(0,0,0,0.05)'
+                        }
+                    },
+                    y1: {
+                        position: 'right',
+                        title: {
+                            display: true,
+                            text: 'AI指数',
+                            color: '#2ecc71'
+                        },
+                        grid: {
+                            drawOnChartArea: false
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0,0,0,0.8)',
+                        bodyFont: {
+                            size: 14
+                        }
+                    }
+                }
+            }
+        };
+
+        // 图表初始化
+        window.onload = function() {
+            const ctx = document.getElementById('trendChart').getContext('2d');
+            new Chart(ctx, config);
+        };
+    </script>
+</body>
+</html>
