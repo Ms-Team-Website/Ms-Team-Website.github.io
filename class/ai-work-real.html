@@ -51,7 +51,7 @@
 
         .data-source {
             margin-top: 1rem;
-            font-size: 0.9em;
+            font-size: 1.2em; /* 调大文字大小 */
             color: #ffffff; /* 改为白色 */
             text-align: center;
             position: relative; /* 确保文字内容在白框之上 */
@@ -66,6 +66,7 @@
             padding-bottom: 0.5rem;
             display: inline-block;
             color: #ffffff; /* 改为白色 */
+            font-size: 2em; /* 调大标题字体大小 */
         }
     </style>
 </head>
@@ -128,13 +129,15 @@
                             text: '就业率 (%)',
                             color: '#ffffff', /* 改为白色 */
                             font: {
-                                weight: 'bold' /* 加粗 */
+                                weight: 'bold', /* 加粗 */
+                                size: 16 /* 调大字体大小 */
                             }
                         },
                         ticks: {
                             color: '#ffffff', /* 改为白色 */
                             font: {
-                                weight: 'bold' /* 加粗 */
+                                weight: 'bold', /* 加粗 */
+                                size: 14 /* 调大字体大小 */
                             }
                         },
                         beginAtZero: false,
@@ -149,15 +152,17 @@
                         title: {
                             display: true,
                             text: 'AI指数',
-                            color: '#2ecc71', 
+                            color: '#ffffff', /* 改为白色 */
                             font: {
-                                weight: 'bold' /* 加粗 */
+                                weight: 'bold', /* 加粗 */
+                                size: 16 /* 调大字体大小 */
                             }
                         },
                         ticks: {
                             color: '#ffffff', /* 改为白色 */
                             font: {
-                                weight: 'bold' /* 加粗 */
+                                weight: 'bold', /* 加粗 */
+                                size: 14 /* 调大字体大小 */
                             }
                         },
                         grid: {
@@ -168,7 +173,8 @@
                         ticks: {
                             color: '#ffffff', /* 改为白色 */
                             font: {
-                                weight: 'bold' /* 加粗 */
+                                weight: 'bold', /* 加粗 */
+                                size: 14 /* 调大字体大小 */
                             }
                         }
                     }
@@ -181,7 +187,8 @@
                         labels: {
                             color: '#ffffff', /* 改为白色 */
                             font: {
-                                weight: 'bold' /* 加粗 */
+                                weight: 'bold', /* 加粗 */
+                                size: 14 /* 调大字体大小 */
                             }
                         }
                     },
@@ -189,8 +196,12 @@
                         backgroundColor: 'rgba(255,255,255,0.8)', /* 工具提示背景改为白色半透明 */
                         titleColor: '#000000', /* 工具提示标题改为黑色 */
                         bodyColor: '#000000', /* 工具提示内容改为黑色 */
+                        titleFont: {
+                            size: 16, /* 调大工具提示标题字体大小 */
+                            weight: 'bold' /* 加粗 */
+                        },
                         bodyFont: {
-                            size: 14,
+                            size: 14, /* 调大工具提示内容字体大小 */
                             weight: 'bold' /* 加粗 */
                         }
                     }
