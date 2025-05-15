@@ -124,7 +124,17 @@
                     y: {
                         title: {
                             display: true,
-                            text: '就业率 (%)'
+                            text: '就业率 (%)',
+                            color: '#000', /* 改为黑色 */
+                            font: {
+                                weight: 'bold' /* 加粗 */
+                            }
+                        },
+                        ticks: {
+                            color: '#000', /* 改为黑色 */
+                            font: {
+                                weight: 'bold' /* 加粗 */
+                            }
                         },
                         beginAtZero: false,
                         min: 40,
@@ -138,10 +148,27 @@
                         title: {
                             display: true,
                             text: 'AI指数',
-                            color: '#2ecc71'
+                            color: '#2ecc71', 
+                            font: {
+                                weight: 'bold' /* 加粗 */
+                            }
+                        },
+                        ticks: {
+                            color: '#000', /* 改为黑色 */
+                            font: {
+                                weight: 'bold' /* 加粗 */
+                            }
                         },
                         grid: {
                             drawOnChartArea: false
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: '#000', /* 改为黑色 */
+                            font: {
+                                weight: 'bold' /* 加粗 */
+                            }
                         }
                     }
                 },
@@ -149,10 +176,19 @@
                     title: {
                         display: false
                     },
+                    legend: {
+                        labels: {
+                            color: '#000', /* 改为黑色 */
+                            font: {
+                                weight: 'bold' /* 加粗 */
+                            }
+                        }
+                    },
                     tooltip: {
                         backgroundColor: 'rgba(0,0,0,0.8)',
                         bodyFont: {
-                            size: 14
+                            size: 14,
+                            weight: 'bold' /* 加粗 */
                         }
                     }
                 }
