@@ -9,7 +9,7 @@
     <style>
         :root {
             --bg-color: #f8f9fa;
-            --text-primary: #2c3e50;
+            --text-primary: #ffffff; /* 改为白色 */
             --chart-accent: #3498db;
         }
 
@@ -40,7 +40,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.3); /* 设置半透明白色 */
+            background-color: rgba(255, 255, 255, 0.2); /* 设置半透明白色 */
             z-index: 1; /* 确保白框叠加在背景图片上 */
         }
 
@@ -52,7 +52,7 @@
         .data-source {
             margin-top: 1rem;
             font-size: 0.9em;
-            color: #black;
+            color: #ffffff; /* 改为白色 */
             text-align: center;
             position: relative; /* 确保文字内容在白框之上 */
             z-index: 2;
@@ -65,6 +65,7 @@
             border-bottom: 2px solid var(--chart-accent);
             padding-bottom: 0.5rem;
             display: inline-block;
+            color: #ffffff; /* 改为白色 */
         }
     </style>
 </head>
@@ -125,13 +126,13 @@
                         title: {
                             display: true,
                             text: '就业率 (%)',
-                            color: '#000', /* 改为黑色 */
+                            color: '#ffffff', /* 改为白色 */
                             font: {
                                 weight: 'bold' /* 加粗 */
                             }
                         },
                         ticks: {
-                            color: '#000', /* 改为黑色 */
+                            color: '#ffffff', /* 改为白色 */
                             font: {
                                 weight: 'bold' /* 加粗 */
                             }
@@ -140,7 +141,7 @@
                         min: 40,
                         max: 100,
                         grid: {
-                            color: 'rgba(0,0,0,0.05)'
+                            color: 'rgba(255,255,255,0.2)' /* 网格线颜色调整为半透明白色 */
                         }
                     },
                     y1: {
@@ -154,7 +155,7 @@
                             }
                         },
                         ticks: {
-                            color: '#000', /* 改为黑色 */
+                            color: '#ffffff', /* 改为白色 */
                             font: {
                                 weight: 'bold' /* 加粗 */
                             }
@@ -165,7 +166,7 @@
                     },
                     x: {
                         ticks: {
-                            color: '#000', /* 改为黑色 */
+                            color: '#ffffff', /* 改为白色 */
                             font: {
                                 weight: 'bold' /* 加粗 */
                             }
@@ -178,14 +179,16 @@
                     },
                     legend: {
                         labels: {
-                            color: '#000', /* 改为黑色 */
+                            color: '#ffffff', /* 改为白色 */
                             font: {
                                 weight: 'bold' /* 加粗 */
                             }
                         }
                     },
                     tooltip: {
-                        backgroundColor: 'rgba(0,0,0,0.8)',
+                        backgroundColor: 'rgba(255,255,255,0.8)', /* 工具提示背景改为白色半透明 */
+                        titleColor: '#000000', /* 工具提示标题改为黑色 */
+                        bodyColor: '#000000', /* 工具提示内容改为黑色 */
                         bodyFont: {
                             size: 14,
                             weight: 'bold' /* 加粗 */
