@@ -24,9 +24,14 @@
         }
 
         .chart-container {
+            position: relative;
             background-image: url('AI.jpg');
             background-size: cover; /* 让图片填充整个背景 */
             background-position: center; /* 让图片居中 */
+            border-radius: 20px; /* 设置圆角 */
+            overflow: hidden; /* 确保背景图片与圆角一致 */
+            border: 5px solid rgba(255, 255, 255, 0.5); /* 高透明度白框 */
+            padding: 2rem; /* 增加内边距以防止内容靠近边框 */
         }
 
         .data-source {
